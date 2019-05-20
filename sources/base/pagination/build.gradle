@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'realm-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.magora-ap'
+group='com.github.magora-android'
 
 android {
     compileSdkVersion Cfg.compileSdkVersion
