@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.magora-ap'
+
+android {
+    compileSdkVersion Cfg.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion Cfg.minSdkVersion
+        targetSdkVersion Cfg.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation Deps.kotlin
+    implementation Deps.supportAppCompat
+    implementation Deps.supportAnnotation
+    implementation Deps.recyclerView
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.espressoCore
+    androidTestImplementation Deps.runner
+}
+repositories {
+    mavenCentral()
+}

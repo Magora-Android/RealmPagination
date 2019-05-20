@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">features-common</string>
+
+    <string name="button_ok"/>
+
+    <string name="error_empty">There is nothing to show.\nTry to tap on the screen to refresh.</string>
+    <string name="error_validation_email">Invalid email address</string>
+    <string name="error_validation_empty">Field must not be empty</string>
+</resources>

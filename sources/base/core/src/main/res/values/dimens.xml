@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_xxxxsmall">1px</dimen>
+    <dimen name="size_xxxsmall">1dp</dimen>
+    <dimen name="size_xxsmall">2dp</dimen>
+    <dimen name="size_xsmall">4dp</dimen>
+    <dimen name="size_small">8dp</dimen>
+    <dimen name="size_medium">16dp</dimen>
+    <dimen name="size_large">24dp</dimen>
+    <dimen name="size_xlarge">32dp</dimen>
+    <dimen name="size_xxlarge">40dp</dimen>
+    <dimen name="size_xxxlarge">48dp</dimen>
+    <dimen name="size_xxxxlarge">56dp</dimen>
+
+    <dimen name="size_clickable">48dp</dimen>
+</resources>

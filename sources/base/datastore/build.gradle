@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+apply plugin: 'kotlinx-serialization'
+
+android {
+    compileSdkVersion Cfg.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion Cfg.minSdkVersion
+        targetSdkVersion Cfg.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    flavorDimensions "env"
+
+    productFlavors {
+        mock {
+        }
+        dev {
+        }
+        prod {
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':core')
+    implementation project(':model')
+
+    implementation Deps.kotlin
+    implementation Deps.kotlinSerialization
+    implementation Deps.kotlinCoroutinesCore
+    implementation Deps.kotlinCoroutinesAndroid
+    implementation Deps.lifecycleLibrary
+    implementation Deps.rxJava
+    implementation Deps.timber
+
+    implementation Deps.koin
+    implementation Deps.koinScope
+    implementation Deps.koinViewModel
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.espressoCore
+    androidTestImplementation Deps.runner
+}

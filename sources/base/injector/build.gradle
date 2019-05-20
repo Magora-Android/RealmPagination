@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion Cfg.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.magora.app"
+        minSdkVersion Cfg.minSdkVersion
+        targetSdkVersion Cfg.targetSdkVersion
+        versionCode 1
+        versionName "0.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        project.ext.set("archivesBaseName", defaultConfig.applicationId + "-" + defaultConfig.versionName)
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "env"
+
+    productFlavors {
+        mock {
+            applicationIdSuffix ".mock"
+        }
+        dev {
+            applicationIdSuffix ".dev"
+        }
+        prod {
+            applicationIdSuffix ""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':core')
+    implementation project(':networking')
+    implementation project(':datastore')
+    implementation project(':splash')
+    implementation project(':main_screen')
+    implementation project(':users_list')
+    implementation project(':user_details')
+
+    implementation Deps.kotlin
+
+    implementation Deps.supportAppCompat
+    implementation Deps.lifecycleLibrary
+    implementation Deps.cicerone
+
+    implementation Deps.timber
+
+    implementation Deps.koin
+    implementation Deps.koinScope
+    implementation Deps.koinViewModel
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.espressoCore
+    androidTestImplementation Deps.runner
+}

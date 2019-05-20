@@ -1,0 +1,31 @@
+include ':core'
+project (':core').projectDir = new File(rootDir, 'sources/base/core')
+
+include ':injector'
+project (':injector').projectDir = new File(rootDir, 'sources/base/injector')
+
+include ':model'
+project (':model').projectDir = new File(rootDir, 'sources/base/model')
+
+include ':networking'
+project (':networking').projectDir = new File(rootDir, 'sources/base/networking')
+
+include ':datastore'
+project (':datastore').projectDir = new File(rootDir, 'sources/base/datastore')
+
+include ':pagination'
+project (':pagination').projectDir = new File(rootDir, 'sources/base/pagination')
+
+include ':splash'
+project (':splash').projectDir = new File(rootDir, 'sources/features/splash')
+
+include ':main_screen'
+project (':main_screen').projectDir = new File(rootDir, 'sources/features/main_screen')
+
+include ':users_list'
+project (':users_list').projectDir = new File(rootDir, 'sources/features/users_list')
+
+include ':user_details'
+project (':user_details').projectDir = new File(rootDir, 'sources/features/user_details')
+
+

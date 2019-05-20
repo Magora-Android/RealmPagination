@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rootViewGroup" type="id"/>
+    <item name="containerViewGroup" type="id"/>
+
+    <item name="toolbar" type="id"/>
+
+    <item name="progressView" type="id"/>
+    <item name="emptyView" type="id"/>
+    <item name="emptyTextView" type="id"/>
+</resources>

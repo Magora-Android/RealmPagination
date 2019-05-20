@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Button-->
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+
+    </style>
+
+    <style name="Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+
+    </style>
+
+    <!--Text-->
+
+    <style name="Text" parent="TextAppearance.AppCompat">
+
+    </style>
+
+    <style name="Text.Title" parent="TextAppearance.AppCompat.Title">
+
+    </style>
+
+</resources>
