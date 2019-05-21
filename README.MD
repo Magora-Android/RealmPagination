@@ -20,6 +20,7 @@ And it's available on Jitpack, so you need to add
 
 # How To
 First you need to create a DataSourceFactory
+
     class UsersListDataSourceFactory : RealmDataSource.Factory<Int, User>() {
 
         override fun create(): RealmDataSource<Int, User> {
@@ -43,6 +44,8 @@ First you need to create a DataSourceFactory
             //...
         }
     }
+
+    val dsFactory = UsersListDataSourceFactory()
 
 Then you need to create a Paged List
 
