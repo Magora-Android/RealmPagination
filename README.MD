@@ -1,7 +1,7 @@
-#RealmPagination
+# RealmPagination
 Just a copy of Google Paging library (https://developer.android.com/topic/libraries/architecture/paging) entirely rewritten in Kotlin and intended to be used with Realm.
 
-#Adding to project
+# Adding to project
 To use RealmPagination you need to add as a dependency:
 
 `implementation 'com.github.magora-android:realmpagination:1.0.0'`
@@ -16,7 +16,7 @@ And it's available on Jitpack, so you need to add
         // ...
     }
 
-#How To
+# How To
 First you need to create a DataSourceFactory
     class UsersListDataSourceFactory : RealmDataSource.Factory<Int, User>() {
 
