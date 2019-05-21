@@ -1,4 +1,7 @@
 # RealmPagination
+
+[![Generic badge](https://img.shields.io/badge/jitPack-1.0.0-ff00.svg)](https://github.com/Magora-Android/RealmPagination/)
+
 Just a copy of Google Paging library (https://developer.android.com/topic/libraries/architecture/paging) entirely rewritten in Kotlin and intended to be used with Realm.
 
 
