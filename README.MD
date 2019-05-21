@@ -1,6 +1,7 @@
 # RealmPagination
 Just a copy of Google Paging library (https://developer.android.com/topic/libraries/architecture/paging) entirely rewritten in Kotlin and intended to be used with Realm.
 
+
 # Adding to project
 To use RealmPagination you need to add as a dependency:
 
@@ -15,6 +16,7 @@ And it's available on Jitpack, so you need to add
         }
         // ...
     }
+
 
 # How To
 First you need to create a DataSourceFactory
